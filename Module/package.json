@@ -6,13 +6,16 @@
   "scripts": {
     "server": "nodemon server/index.js",
     "app": "webpack -d --watch",
-    "addData" : "node data/data.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "addData" : "node data/addData.js",
+    "test": "jest"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint"
-    }
+  "jest": {
+    "collectCoverage": true,
+    "verbose": true,
+    "testMatch": [
+      "**/client/src/components/**/*.test.{js,jsx}",
+      "**/tests/test.js"
+    ]
   },
   "repository": {
     "type": "git",
