@@ -8,6 +8,12 @@ mongodb.MongoClient.connect(uri, (connectionErr, client) => {
   if (connectionErr) throw connectionErr;
   const db = client.db('carebnb');
   const homeData = db.collection('homeData');
+  // Checks if data exists, drops if exists
+  if (homeData.find()) {
+    client.db('carebnb').dropDatabase((dropErr) => {
+      if (dropErr) throw dropErr;
+    });
+  }
   // Insert Mock data
   homeData.insert(mockData, (insertErr) => {
     if (insertErr) throw insertErr;
