@@ -22,10 +22,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
     return (
       <div className="container">
-        <p>{JSON.stringify(data)}</p>
+        {/* <Header />
+      <Body />
+      <Ammenities /> */}
       </div>
     );
   }
