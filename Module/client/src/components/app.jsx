@@ -6,7 +6,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       // refers to the id number typed in the url
-      id: window.location.href.match(/id\s*=\s*(.*)/)[1] - 1,
+      id: window.location.href.match(/id\s*=\s*(.*)/) ? window.location.href.match(/id\s*=\s*(.*)/)[1] - 1 : 0,
     };
   }
 
@@ -17,7 +17,7 @@ class App extends React.Component {
   getData() {
     axios.get('/listinginfo').then((response) => {
       let { id } = this.state;
-      if (!id || (id > 100) || (id < 0)) { id = 1; }
+      if (!id || (id > 100) || (id < 0)) { id = 0; }
       this.setState({ data: response.data[id] });
     });
   }
@@ -28,7 +28,6 @@ class App extends React.Component {
         {/* <Header />
       <Body />
       <Ammenities /> */}
-      <div>{JSON.stringify(this.state.data)}</div>
       </div>
     );
   }
