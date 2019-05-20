@@ -33,3 +33,6 @@ client/dist/
 
 # jest
 *__snapshots__
+
+
+**/bundle.js

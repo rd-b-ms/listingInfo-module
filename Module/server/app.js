@@ -7,7 +7,7 @@ const app = express();
 // setting up port
 app.set('PORT', 3004);
 // serving static files and setting middleware
-app.use(express.static('public/'));
+app.use(express.static('./client/public'));
 // sending seed data to client
 app.get('/listinginfo', (request, response) => {
   db('get', (err, result) => {
