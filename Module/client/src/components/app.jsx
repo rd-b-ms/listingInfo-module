@@ -16,7 +16,8 @@ class App extends React.Component {
 
   getData() {
     axios.get('/listinginfo').then((response) => {
-      const { id } = this.state;
+      let { id } = this.state;
+      if (!id || (id > 100) || (id < 0)) { id = 1; }
       this.setState({ data: response.data[id] });
     });
   }
@@ -27,6 +28,7 @@ class App extends React.Component {
         {/* <Header />
       <Body />
       <Ammenities /> */}
+      <div>{JSON.stringify(this.state.data)}</div>
       </div>
     );
   }
