@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 import Header from './header';
+import { Container } from '../styles/style';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,22 +30,6 @@ class App extends React.Component {
     if (loading) return null;
     const { hostName, header, neighborhood } = data;
     document.title = header;
-
-    const Container = styled.div`
-      width: 58.333333333333336% !important;
-      min-height: 1px !important;
-      float: left !important;
-      padding-left: 8px !important;
-      padding-right: 8px !important;
-      min-height: 22px !important;
-      position: relative !important;
-      box-sizing: border-box;
-      display: block;
-      font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-      font-size: 14px;
-      line-height: 1.43;
-      color: #484848;
-    `;
 
     return (
       <Container>
