@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Header from './header';
+import Body from './body';
 import { Container } from '../styles/style';
 
 class App extends React.Component {
@@ -17,10 +18,12 @@ class App extends React.Component {
     this.getData();
   }
 
+  // initial and only request to server for mockData
   getData() {
     axios.get('/listinginfo').then((response) => {
       let { id } = this.state;
-      if (!id || (id > 100) || (id < 0)) { id = 0; }
+      // sets id to the first mock data example if id is undefined or outside range
+      if (!id || (id > 101) || (id < 0)) { id = 0; }
       this.setState({ data: response.data[id], loading: false });
     });
   }
@@ -28,14 +31,36 @@ class App extends React.Component {
   render() {
     const { loading, data } = this.state;
     if (loading) return null;
-    const { hostName, header, neighborhood } = data;
+    // deconstructing data that will be sent down as props
+    const {
+      hostName, homeType, header, neighborhood, bathrooms, bedrooms, capacity,
+      beds, primTrait, secondaryTrait, tertTrait,
+    } = data;
+    // similar to Airbnb, this sets the description as tab title
     document.title = header;
-
+    // creating prop objects for app's components
+    const superHost = (primTrait === 'Super host');
+    const headerProps = {
+      hostName,
+      header,
+      neighborhood,
+      superHost,
+    };
+    const BodyProps = {
+      hostName,
+      homeType,
+      bathrooms,
+      beds,
+      bedrooms,
+      capacity,
+      primTrait,
+      secondaryTrait,
+      tertTrait,
+    };
     return (
       <Container>
-        <Header hostName={hostName} header={header} neighborhood={neighborhood} />
-        {/* <Body />
-        <Ammenities /> */}
+        <Header {...headerProps} />
+        <Body {...BodyProps} />
       </Container>
     );
   }
