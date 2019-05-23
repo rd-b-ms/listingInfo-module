@@ -58,7 +58,7 @@ const mockDataGenerator = () => {
       this.hostName = hostName[random(hostName.length - 1)];
       this.bedrooms = random(6) + 1;
       this.homeType = ((bedrooms) => {
-        switch (bedrooms) {
+        switch (true) {
           case (bedrooms === 1):
             return `Private room in ${homeType[random(homeType.length - 1)].split(' ')[1]}`;
           case (bedrooms > 4):
@@ -67,13 +67,14 @@ const mockDataGenerator = () => {
             return homeType[random(homeType.length - 1)];
         }
       })(this.bedrooms);
-      this.capacity = (this.homeType[0] === 'P') ? 1 : this.bedrooms + random(5);
+      this.beds = (this.homeType[0] === 'P') ? 1 : this.bedrooms + random(3);
+      this.capacity = (this.homeType[0] === 'P') ? 1 : this.beds + random(3);
       this.bathrooms = (this.homeType[0] === 'P') ? random(1) + 1 : Math.max(this.bedrooms + random(4) - 2, 1);
       this.neighborhood = neighborhoods[random(neighborhoods.length - 1)];
       this.header = (this.homeType[0] === 'E') ? `${adjectives[random(adjectives.length - 1)]} ${this.bedrooms} bedroom ${this.homeType.split(' ')[1]} ${propisitions[random(propisitions.length - 1)]} ${this.neighborhood}` : `${adjectives[random(adjectives.length - 1)]} private room ${propisitions[random(propisitions.length - 1)]} ${this.neighborhood}`;
       this.primTrait = featTraits[random(2)];
       this.secondTrait = featTraits[random(2) + 2];
-      this.tertTraits = featTraits[random(2) + 4];
+      this.tertTrait = featTraits[random(2) + 4];
       this.kitchen = (this.homeType[0] === 'P') ? amenityProbablity(70) : true;
       this.amenities = [
         { name: 'Wifi', value: amenityProbablity(98) },
