@@ -15,6 +15,7 @@ font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue
 font-size: 14px;
 line-height: 1.43;
 color: #484848;
+-webkit-font-smoothing: antialiased;
 `;
 
 const HeaderBox = styled.div`
@@ -91,12 +92,84 @@ const HostImageBox = styled.img`
 
 const HostName = styled.div`
   margin: 0px !important;
-  word-wrap: break-word !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 1.2857142857142858em !important;
   color: #767676 !important;
+`;
+
+const Medal = styled.svg`
+ height: 32px;
+ width: 32px; 
+ display: block; 
+ fill: currentcolor;
+`;
+
+const MedalBox = styled.div`
+  position: absolute !important;
+  right: 20% !important;
+  bottom: 30% !important;
+  line-height: 0 !important;
+`;
+
+const BodyContainer = styled.div`
+    float: left;
+    width: 92%;
+    display: block;
+    Margin-left: 8px;
+    Margin-right: 8px;
+    padding-bottom: 16px;
+    border-bottom-width: var(--border-rule-border-width, 1px) !important;
+    border-bottom-color: var(--color-divider, #EBEBEB) !important;
+    border-bottom-style: solid !important;
+  `;
+const TraitBox = styled.div`
+    margin-top: 16px;
+    display: table !important;
+    width: 100% !important;
+    border-spacing: 0px !important;
+  `;
+const LogoBox = styled.div`
+    display: table-cell !important;
+    vertical-align: top !important;
+  `;
+
+const Icon = styled.svg`
+  position:absolute;
+  display: block;
+  fill: #484848;
+  max-width: 18px;
+  length:18px;
+  overflow: hidden;
+`;
+const TraitDesc = styled.div`
+    display: table-cell !important;
+    width: 100% !important;
+    vertical-align: top !important;
+    padding-left: 30px
+`;
+const TraitHeader = styled.div`
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+`;
+
+const HomeDetails = styled.div`
+  display: inline-block;
+`;
+
+const Detail = styled.div`
+  display: inline-block;
+  margin-right: 24px;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+
 `;
 
 export {
@@ -108,4 +181,14 @@ export {
   HostBox,
   HostImageBox,
   HostName,
+  Medal,
+  MedalBox,
+  BodyContainer,
+  TraitBox,
+  LogoBox,
+  Icon,
+  TraitDesc,
+  TraitHeader,
+  HomeDetails,
+  Detail,
 };
