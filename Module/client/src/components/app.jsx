@@ -34,7 +34,7 @@ class App extends React.Component {
     // deconstructing data that will be sent down as props
     const {
       hostName, homeType, header, neighborhood, bathrooms, bedrooms, capacity,
-      beds, primTrait, secondaryTrait, tertTrait,
+      beds, primTrait, secondTrait, tertTrait,
     } = data;
     // similar to Airbnb, this sets the description as tab title
     document.title = header;
@@ -46,7 +46,7 @@ class App extends React.Component {
       neighborhood,
       superHost,
     };
-    const BodyProps = {
+    const bodyProps = {
       hostName,
       homeType,
       bathrooms,
@@ -54,13 +54,13 @@ class App extends React.Component {
       bedrooms,
       capacity,
       primTrait,
-      secondaryTrait,
+      secondTrait,
       tertTrait,
     };
     return (
       <Container>
         <Header {...headerProps} />
-        <Body {...BodyProps} />
+        <Body {...bodyProps} />
       </Container>
     );
   }
