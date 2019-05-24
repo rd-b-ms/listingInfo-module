@@ -12,7 +12,7 @@ const Body = (props) => {
   const {
     hostName, homeType, bathrooms, bedrooms, beds, capacity, primTrait, secondTrait, tertTrait,
   } = props;
-  // creates one unifed logo from a specific array of svg paths declared in the styles/svg file
+  // creates one unified logo from a specific array of svg paths declared in the styles/svg file
   const paths = svg => svg.map(iconPath => <path d={iconPath} />);
   // Each host has three traits (superhost, sparkling clean, etc...) that are featured on the listing info
   const traits = [primTrait, secondTrait, tertTrait];
