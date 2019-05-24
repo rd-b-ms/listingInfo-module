@@ -8,7 +8,9 @@ import {
 
 const Header = (props) => {
   const { hostName, header, neighborhood, superHost } = props;
+  // link to the aws image hosting file
   const hostImage = `https://s3.amazonaws.com/fecfacedata/${hostName}.jpg`;
+  // adds a superhost medal on top of the host image if the superhost trait is true
   const hasMedal = (superHost) ? medal : 0;
 
   return (
