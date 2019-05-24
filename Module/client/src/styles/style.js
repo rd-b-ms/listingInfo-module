@@ -119,7 +119,7 @@ const BodyContainer = styled.div`
     display: block;
     Margin-left: 8px;
     Margin-right: 8px;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
     border-bottom-width: var(--border-rule-border-width, 1px) !important;
     border-bottom-color: var(--color-divider, #EBEBEB) !important;
     border-bottom-style: solid !important;
@@ -139,8 +139,8 @@ const Icon = styled.svg`
   position:absolute;
   display: block;
   fill: #484848;
-  max-width: 18px;
-  length:18px;
+  width: 16px;
+  length:20px;
   overflow: hidden;
 `;
 const TraitDesc = styled.div`
