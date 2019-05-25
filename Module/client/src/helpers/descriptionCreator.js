@@ -6,7 +6,7 @@ const descriptionCreator = (trait, hostname) => {
     case 'Super host':
       // for superhost adds name infront
       return [`${hostname} is a Superhost`, 'Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'];
-    case 'Sparking Clean':
+    case 'Sparkling Clean':
       return ['Sparkling clean', '15 recent guests said this place was sparkling clean.'];
     case 'Breakfast':
       return ['Breakfast', 'This is one of a few places in the area that has this feature.'];

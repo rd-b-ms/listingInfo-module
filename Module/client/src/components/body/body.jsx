@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Traits from './traits';
 // an object containing svg paths that will be turned into logos
-import { icons } from '../styles/svg';
+import { icons } from '../../styles/svg';
 // styled components that will be used as classes for styling
 import {
   BodyContainer, TraitBox, LogoBox, Icon, TraitDesc, TraitHeader, HomeDetails, Detail,
-} from '../styles/style';
+} from '../../styles/style';
 
 const Body = (props) => {
   const {
@@ -28,16 +28,16 @@ const Body = (props) => {
         <TraitBox>
           <LogoBox>
             <Icon viewBox="0 0 100 100">{paths(icons.home.paths)}</Icon>
-            <TraitDesc>
-              <TraitHeader>{homeType}</TraitHeader>
-              <HomeDetails>
+          </LogoBox>
+          <TraitDesc>
+            <TraitHeader>{homeType}</TraitHeader>
+            <HomeDetails>
                   <Detail>{capacity} guests</Detail>
                   <Detail>{bedrooms} bedrooms</Detail>
                   <Detail>{beds} beds</Detail>
                   <Detail>{bathrooms} bathrooms</Detail>
-              </HomeDetails>
-            </TraitDesc>
-          </LogoBox>
+            </HomeDetails>
+          </TraitDesc>
         </TraitBox>
         <Traits {...traitsProps} />
       </BodyContainer>

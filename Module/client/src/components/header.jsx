@@ -11,7 +11,7 @@ const Header = (props) => {
   // link to the aws image hosting file
   const hostImage = `https://s3.amazonaws.com/fecfacedata/${hostName}.jpg`;
   // adds a superhost medal on top of the host image if the superhost trait is true
-  const hasMedal = (superHost) ? medal : 0;
+  const hasMedal = (superHost) ? (<MedalBox><Medal>{medal}</Medal></MedalBox>) : null;
 
   return (
     <div>
@@ -23,9 +23,7 @@ const Header = (props) => {
       </HeaderBox>
       <HostBox>
         <HostImageBox src={hostImage} />
-        <MedalBox>
-          <Medal>{hasMedal}</Medal>
-        </MedalBox>
+        {hasMedal}
         <HostName>{hostName}</HostName>
       </HostBox>
     </div>

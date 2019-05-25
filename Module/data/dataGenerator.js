@@ -48,9 +48,32 @@ const mockDataGenerator = () => {
   ];
   const homeType = ['Entire apartment', 'Entire condomninium', 'Entire townhouse', 'Entire house'];
   const adjectives = ['Beach side', 'Cozy', 'Beautiful', 'Captivating', 'Luxurious', 'Unique', 'Quaint', 'Comfortable', 'Homey', 'Welcoming', 'Charming', 'Elegant'];
-  const propisitions = ['in', 'in the heart of', 'in the center of', 'near', 'close by', 'with views of the harbor in', 'in central', 'with a 2 minute walk to central', 'with a 5 minute walk to central', 'close to lightrail station in', 'with views of Sydney Theater from', 'on the coast of', 'near Sydney Airport in'];
-  const featTraits = ['Great Location', 'Super host', 'Sparking Clean', 'Breakfast', 'Self check-in', 'Great check-in experience'];
+  const propisitions = ['in', 'in the heart of', 'in the center of', 'near', 'close by', 'with views of the harbor in', 'in central', 'with a 2 minute walk to central', 'with a 5 minute walk to central', 'close to lightrail station in', 'with views of Sydney Opera House from', 'on the coast of', 'near Sydney Airport in'];
+  const featTraits = ['Great Location', 'Super host', 'Sparkling Clean', 'Breakfast', 'Self check-in', 'Great check-in experience'];
   const hostName = ['Angela', 'Ashley', 'Casey', 'Hailey', 'Jen', 'Lily', 'Marta', 'Sarah', 'Sasha', 'Scarlett', 'Tess', 'Alan', 'Alec', 'Chris', 'Dan', 'Harry', 'Jake', 'Matt', 'Mel', 'Paul', 'Steven'];
+  const longDescription = `Quite Possibly the Best Location in Sydney!! Just moments from Sydney CBD but situated in a very quiet street. We are right behind the famous Oxford street with great restaurants and Nightlife + buses running every 3-5 minutes direct to Bondi Beach and just a short 15 Minute walk to the world famous Sydney Opera House.
+
+The space
+
+Stylishly furnished place featuring brand new chic designer furnishings.
+
+Location is the best thing about my place - hundred of restaurants and shops in the area.
+
+Nearby attractions and walking time:
+  + World Square Shopping Centre - 3 min (0.3km) - has large supermarket Coles
+  + Chinatown - 5 min (0.5km)
+  + Central station - 5 min (0.4km)
+  + Darling Harbour - 10 min (0.8km)
+  + Hyde Park - 5 min (0.4km)
+  + Oxford Street - 8 min (0.6km)
+  + Powerhouse Museum - 13 min (1km)
+  + Pitt St Mall/Westfield/Sydney Tower - 15 min (1.2km)
+  + Royal Botanical Gardens entrance - 18 min (1.5km)
+  + Wynyard Station - 20 min (1.7km)
+  + Circular Quay/The Rocks - 25 min (2km)
+  + Opera House - 30 min (2.5km)
+
+The place comes fully furnished with everything you need for a comfortable stay, including fresh linen, blankets, towels and toiletries.`;
   // Class that will randomly select for properties.
   class Home {
     constructor(id) {
@@ -75,6 +98,7 @@ const mockDataGenerator = () => {
       this.primTrait = featTraits[random(2)];
       this.secondTrait = featTraits[random(2) + 2];
       this.tertTrait = featTraits[random(2) + 4];
+      this.longDescription = longDescription;
       this.kitchen = (this.homeType[0] === 'P') ? amenityProbablity(70) : true;
       this.amenities = [
         { name: 'Wifi', value: amenityProbablity(98) },
