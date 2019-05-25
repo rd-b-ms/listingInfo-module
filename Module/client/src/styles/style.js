@@ -120,8 +120,8 @@ const BodyContainer = styled.div`
     Margin-left: 8px;
     Margin-right: 8px;
     padding-bottom: 24px;
-    border-bottom-width: var(--border-rule-border-width, 1px);
-    border-bottom-color: var(--color-divider, #EBEBEB);
+    border-bottom-width: 1px;
+    border-bottom-color: #EBEBEB;
     border-bottom-style: solid;
   `;
 const TraitBox = styled.div`
@@ -131,23 +131,23 @@ const TraitBox = styled.div`
     border-spacing: 0px;
   `;
 const LogoBox = styled.div`
-    display: table-cell;
-    vertical-align: top;
+    padding-top: 5px;
+    display: block
+    vertical-align: middle;
   `;
 
 const Icon = styled.svg`
-  position: absolute;
+  position: relative;
   display: block;
   fill: #484848;
-  width: 16px;
-  length: 20px;
-  overflow: hidden;
+  width: 12px;
+  overflow: hidden;  
 `;
 const TraitDesc = styled.div`
-    display: table-cell;
-    width: 100%;
-    vertical-align: top;
-    padding-left: 30px
+  display: table-cell;
+  width: 100%;
+  vertical-align: top;
+  padding-left: 16px
 `;
 const TraitHeader = styled.div`
   margin: 0px;
@@ -172,6 +172,64 @@ const Detail = styled.div`
 
 `;
 
+const DescriptionContainer = styled.div`
+float: left;
+display: box;
+width: 92%
+margin-top: 24px;
+padding-left: 8px;
+margin-right: 16px;
+overflow-wrap: break-word;
+font-size: 16px;
+font-weight: 400;
+border-bottom-width: 1px;
+border-bottom-color: #EBEBEB;
+border-bottom-style: solid;
+`;
+
+const ContactHost = styled.div`
+display: inline-block
+color: #008489
+margin-top: 24px;
+margin-bottom: 24px;
+font-weight: 600;
+&:hover {
+text-decoration: underline;
+cursor: pointer;
+}
+`;
+
+const ButtonText = styled.div`
+display: inline-block
+padding-right: 8px
+`;
+
+const ArrowIcon = styled.div`
+display: inline-block
+`;
+
+const ShowButton = styled.div`
+display: inline-block;
+color: #008489
+padding-top: 10px;
+font-weight: 600;
+&:hover {
+  cursor: pointer;
+}
+&:hover ${ButtonText} {
+text-decoration: underline;
+}
+`;
+
+const Paragraph = styled.div`
+margin-bottom: 14px;
+white-space: pre-line;
+`;
+const BoldParagraph = styled.div`
+font-weight: 600;
+margin-bottom: 14px;
+`;
+
 export {
   Container,
   HeaderBox,
@@ -191,4 +249,11 @@ export {
   TraitHeader,
   HomeDetails,
   Detail,
+  DescriptionContainer,
+  ContactHost,
+  ButtonText,
+  ArrowIcon,
+  ShowButton,
+  Paragraph,
+  BoldParagraph,
 };
