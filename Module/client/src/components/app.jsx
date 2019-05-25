@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Header from './header';
 import Body from './body/body';
-import LongDescription from './longDescription'
+import LongDescription from './longDescription/longDescription';
 import { Container } from '../styles/style';
 
 class App extends React.Component {
