@@ -7,7 +7,6 @@ import {
   TraitBox, LogoBox, Icon, TraitDesc, TraitHeader, HomeDetails, Detail,
 } from '../../styles/style';
 
-
 const Traits = (props) => {
   const { traits, hostName } = props;
   // maps each trait and gives each one the proper description and proper logo
