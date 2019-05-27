@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Long from './long';
 import Short from './short';
-import { DescriptionContainer, ContactHost } from '../../styles/style';
+import { ComponentContainer, ContactHost } from '../../styles/style';
 
 class LongDescription extends React.Component {
   constructor(props) {
@@ -28,10 +28,10 @@ class LongDescription extends React.Component {
     };
     // The state of hidden deteremines whether the long or short descirption will be rendered.
     return (
-      <DescriptionContainer>
+      <ComponentContainer>
         {(hidden) ? <Short {...descProp} /> : <Long {...descProp} />}
         <ContactHost>Contact host</ContactHost>
-      </DescriptionContainer>
+      </ComponentContainer>
     );
   }
 }
