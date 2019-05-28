@@ -1,24 +1,23 @@
 import styled from 'styled-components';
 
-
-const Container = styled.div`
-width: 58.333333333333336%;
-min-height: 1px;
-float: left;
-padding-left: 8px;
-padding-right: 8px;
-min-height: 22px;
-position: relative;
-box-sizing: border-box;
-display: block;
-font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-font-size: 14px;
-line-height: 1.43;
-color: #484848;
--webkit-font-smoothing: antialiased;
+export const Container = styled.div`
+  width: 58.333333333333336%;
+  min-height: 1px;
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 22px;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  -webkit-font-smoothing: antialiased;
 `;
 
-const HeaderBox = styled.div`
+export const HeaderBox = styled.div`
   width: 75.33333333333334%;
   float: left;
   padding-left: 8px;
@@ -26,7 +25,7 @@ const HeaderBox = styled.div`
   min-height: 1px;
   position: relative;
 `;
-const HeaderText = styled.span`
+export const HeaderText = styled.span`
   margin: 0px;
   word-wrap: break-word;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
@@ -37,7 +36,7 @@ const HeaderText = styled.span`
   padding-top: 6px;
   padding-bottom: 6px;
 `;
-const Neighborhood = styled.div`
+export const Neighborhood = styled.div`
   margin: 0px;
   word-wrap: break-word;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
@@ -49,7 +48,7 @@ const Neighborhood = styled.div`
   padding-bottom: 8px
 `;
 
-const NeighborhoodLink = styled.div`
+export const NeighborhoodLink = styled.div`
   color: inherit;
   display: inline-block;
   font-weight: inherit;
@@ -59,7 +58,7 @@ const NeighborhoodLink = styled.div`
   }
 `;
 
-const HostBox = styled.div`
+export const HostBox = styled.div`
   width: 16.666666666666664%;
   float: left;
   padding-top: 6px;
@@ -73,7 +72,7 @@ const HostBox = styled.div`
   text-align: center;
 `;
 
-const HostImageBox = styled.img`
+export const HostImageBox = styled.img`
   background-color: var(--color-accent-light-gray, #D8D8D8);
   border-radius: var(--border-profile-photo-border-radius, 50%);
   border-width: var(--border-profile-photo-border-width, 2px);
@@ -90,7 +89,7 @@ const HostImageBox = styled.img`
   }
 `;
 
-const HostName = styled.div`
+export const HostName = styled.div`
   margin: 0px;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   font-size: 14px;
@@ -99,21 +98,21 @@ const HostName = styled.div`
   color: #767676;
 `;
 
-const Medal = styled.svg`
+export const Medal = styled.svg`
  height: 32px;
  width: 32px; 
  display: block; 
  fill: currentcolor;
 `;
 
-const MedalBox = styled.div`
+export const MedalBox = styled.div`
   position: absolute;
   right: 20%;
   bottom: 30%;
   line-height: 0;
 `;
 
-const BodyContainer = styled.div`
+export const BodyContainer = styled.div`
     float: left;
     width: 92%;
     display: block;
@@ -124,32 +123,32 @@ const BodyContainer = styled.div`
     border-bottom-color: #EBEBEB;
     border-bottom-style: solid;
   `;
-const TraitBox = styled.div`
+export const TraitBox = styled.div`
     margin-top: 16px;
     display: table;
     width: 100%;
     border-spacing: 0px;
   `;
-const LogoBox = styled.div`
+export const LogoBox = styled.div`
     padding-top: 5px;
     display: block
     vertical-align: middle;
   `;
 
-const Icon = styled.svg`
+export const Icon = styled.svg`
   position: relative;
   display: block;
   fill: #484848;
   width: 12px;
   overflow: hidden;  
 `;
-const TraitDesc = styled.div`
+export const TraitDesc = styled.div`
   display: table-cell;
   width: 100%;
   vertical-align: top;
   padding-left: 16px
 `;
-const TraitHeader = styled.div`
+export const TraitHeader = styled.div`
   margin: 0px;
   word-wrap: break-word;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
@@ -159,11 +158,11 @@ const TraitHeader = styled.div`
   color: #484848;
 `;
 
-const HomeDetails = styled.div`
+export const HomeDetails = styled.div`
   display: inline-block;
 `;
 
-const Detail = styled.div`
+export const Detail = styled.div`
   display: inline-block;
   margin-right: 24px;
   word-wrap: break-word;
@@ -172,88 +171,157 @@ const Detail = styled.div`
 
 `;
 
-const DescriptionContainer = styled.div`
-float: left;
-display: box;
-width: 92%
-margin-top: 24px;
-padding-left: 8px;
-margin-right: 16px;
-overflow-wrap: break-word;
-font-size: 16px;
-font-weight: 400;
-border-bottom-width: 1px;
-border-bottom-color: #EBEBEB;
-border-bottom-style: solid;
+export const ComponentContainer = styled.div`
+  float: left;
+  display: box;
+  width: 92%
+  margin-top: 24px;
+  margin-right: 16px;
+  padding-left: 8px;
+  padding-bottom: 24px;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom-width: 1px;
+  border-bottom-color: #EBEBEB;
+  border-bottom-style: solid;
+  color: #484848;
 `;
 
-const ContactHost = styled.div`
-display: inline-block
-color: #008489
-margin-top: 24px;
-margin-bottom: 24px;
-font-weight: 600;
-&:hover {
-text-decoration: underline;
-cursor: pointer;
-}
-`;
-
-const ButtonText = styled.div`
-display: inline-block
-padding-right: 8px
-`;
-
-const ArrowIcon = styled.div`
-display: inline-block
-`;
-
-const ShowButton = styled.div`
-display: inline-block;
-color: #008489
-padding-top: 10px;
-font-weight: 600;
-&:hover {
+export const ContactHost = styled.div`
+  display: inline-block
+  color: #008489
+  margin-top: 24px;
+  font-weight: 600;
+  &:hover {
+  text-decoration: underline;
   cursor: pointer;
-}
-&:hover ${ButtonText} {
-text-decoration: underline;
-}
+  }
 `;
 
-const Paragraph = styled.div`
-margin-bottom: 14px;
-white-space: pre-line;
-`;
-const BoldParagraph = styled.div`
-font-weight: 600;
-margin-bottom: 14px;
+export const ButtonText = styled.div`
+  display: inline-block
+  padding-right: 8px
 `;
 
-export {
-  Container,
-  HeaderBox,
-  HeaderText,
-  Neighborhood,
-  NeighborhoodLink,
-  HostBox,
-  HostImageBox,
-  HostName,
-  Medal,
-  MedalBox,
-  BodyContainer,
-  TraitBox,
-  LogoBox,
-  Icon,
-  TraitDesc,
-  TraitHeader,
-  HomeDetails,
-  Detail,
-  DescriptionContainer,
-  ContactHost,
-  ButtonText,
-  ArrowIcon,
-  ShowButton,
-  Paragraph,
-  BoldParagraph,
-};
+export const ArrowIcon = styled.div`
+  display: inline-block
+`;
+
+export const ShowButton = styled.div`
+  display: inline-block;
+  color: #008489
+  padding-top: 10px;
+  font-weight: 600;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover ${ButtonText} {
+  text-decoration: underline;
+  }
+`;
+
+export const Paragraph = styled.div`
+  margin-bottom: 14px;
+  white-space: pre-line;
+`;
+
+export const BoldParagraph = styled.div`
+  font-weight: 600;
+  margin-bottom: 14px;
+`;
+
+export const AmenitiesContianer = styled.div`
+  display: block;
+`;
+
+export const AmenitiesTuple = styled.div`
+  min-height: 1px;
+  position: relative;
+  width: 50%;
+  float: left;
+`;
+
+export const Amenity = styled.div`
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 16px
+`;
+
+export const AmenityIcon = styled.svg`
+  display: block;
+  float: left;
+  padding-right: 10px;
+  fill: #767676;
+  max-width: 25px;
+  max-height: 25px;
+  overflow: hidden;
+  stroke-width: 2px;
+  stroke: #767676;
+`;
+
+export const AmenityText = styled.div`
+  display: block;
+  padding-top: 3px;
+`;
+
+export const AmenityButton = styled.div`
+  display: inline-block;
+  color: #008489
+  padding-top: 18px;
+  font-weight: 600;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`;
+
+export const ModalContainer = styled.div`
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  color: #484848;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 48px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 13px;
+`;
+export const ModalHeader = styled.div`
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25em;
+`;
+export const CategoryHeader = styled.div`
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44444em;
+  color: rgb(72, 72, 72);
+  padding-top: 24px;
+`;
+export const AmenityItem = styled.div`
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom-width: 1px;
+  border-bottom-color: #EBEBEB;
+  border-bottom-style: solid;
+  word-wrap: break-word
+`;
+export const AmmenityText = styled.div`
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+`;
+export const NotIncluded = styled.div`
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  text-decoration: line-through;
+  color: #767676;
+`;
+export const AmmenitySubtext = styled.div`
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28em;
+`;

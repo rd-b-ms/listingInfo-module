@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import descriptionCreator from '../../helpers/descriptionCreator';
+import  { traitCreator } from '../../helpers/descriptionCreator';
+import paths from '../../helpers/svgCreator';
 import { icons } from '../../styles/svg';
 import {
   TraitBox, LogoBox, Icon, TraitDesc, TraitHeader, HomeDetails, Detail,
 } from '../../styles/style';
 
-
 const Traits = (props) => {
-  const { traits, paths, hostName } = props;
+  const { traits, hostName } = props;
   // maps each trait and gives each one the proper description and proper logo
   return traits.map((trait) => {
-    const traitDescription = descriptionCreator(trait, hostName);
+    const traitDescription = traitCreator(trait, hostName);
     return (
       <TraitBox>
         <LogoBox>
@@ -30,7 +30,6 @@ const Traits = (props) => {
 
 Traits.propTypes = {
   traits: PropTypes.instanceOf(Array).isRequired,
-  paths: PropTypes.func.isRequired,
   hostName: PropTypes.string.isRequired,
 };
 

@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './header';
 import Body from './body/body';
 import LongDescription from './longDescription/longDescription';
+import Amenities from './amenities/amenities';
 import { Container } from '../styles/style';
 
 class App extends React.Component {
@@ -35,7 +36,7 @@ class App extends React.Component {
     // deconstructing data that will be sent down as props
     const {
       hostName, homeType, header, neighborhood, bathrooms, bedrooms, capacity,
-      beds, primTrait, secondTrait, tertTrait, longDescription,
+      beds, primTrait, secondTrait, tertTrait, longDescription, amenities,
     } = data;
     // similar to Airbnb, this sets the description as tab title
     document.title = header;
@@ -63,6 +64,7 @@ class App extends React.Component {
         <Header {...headerProps} />
         <Body {...bodyProps} />
         <LongDescription longDescription={longDescription} />
+        <Amenities amenities={amenities} />
       </Container>
     );
   }

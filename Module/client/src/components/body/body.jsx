@@ -7,18 +7,16 @@ import { icons } from '../../styles/svg';
 import {
   BodyContainer, TraitBox, LogoBox, Icon, TraitDesc, TraitHeader, HomeDetails, Detail,
 } from '../../styles/style';
+import paths from '../../helpers/svgCreator';
 
 const Body = (props) => {
   const {
     hostName, homeType, bathrooms, bedrooms, beds, capacity, primTrait, secondTrait, tertTrait,
   } = props;
-  // creates one unified logo from a specific array of svg paths declared in the styles/svg file
-  const paths = svg => svg.map(iconPath => <path d={iconPath} />);
-  // Each host has three traits (superhost, sparkling clean, etc...) that are featured on the listing info
+  // each host has three traits (superhost, sparkling clean, etc...) that are featured on the listing info
   const traits = [primTrait, secondTrait, tertTrait];
   const traitsProps = {
     traits,
-    paths,
     hostName,
   };
 

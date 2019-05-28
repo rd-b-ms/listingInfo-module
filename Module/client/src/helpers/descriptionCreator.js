@@ -1,5 +1,5 @@
 // provides each trait with a description and superhosts with the host name.
-const descriptionCreator = (trait, hostname) => {
+export const traitCreator = (trait, hostname) => {
   switch (trait) {
     case 'Great Location':
       return ['Great Location', '95% of recent guests gave the location a 5-star rating.'];
@@ -18,4 +18,48 @@ const descriptionCreator = (trait, hostname) => {
   }
 };
 
-export default descriptionCreator;
+export const basicCategory = {
+  Wifi: 'Continuous access in the listing',
+  'Air conditioning': null,
+  'Laptop friendly workspace': 'A table or desk with space for a laptop and a chair that’s comfortable to work in',
+  Iron: null,
+  Essentials: 'Towels, bed sheets, soap, and toilet paper',
+  TV: null,
+  Washer: null,
+  'Hot water': null,
+};
+
+export const facilitiesCategory = {
+  'Free parking on premise': null,
+  'Private entrance': null,
+  Pool: 'Private or Shared',
+  Elevator: 'The home or building has an elevator that’s at least 52 inches deep and a doorway at least 32 inches wide.',
+  'Hot tub': null,
+};
+
+export const diningCategory = {
+  Kitchen: 'Space where guests can cook their own meals',
+  'Cooking basics': 'Pots and pans, oil, salt and pepper',
+  'Dishes and silverware': null,
+  Microwave: null,
+  Refrigerator: null,
+  Oven: null,
+  Stove: null,
+};
+
+export const bnBCategory = {
+  'Hair dryer': null,
+  Hangers: null,
+  Shampoo: null,
+  'Bed linens': null,
+  'Extra pillows and blankets': null,
+};
+
+export const safetyCategory = {
+  'Carbon monoxide detector': null,
+  'Smoke Detector': null,
+  'First aid kit': null,
+  'Fire extinguisher': null,
+};
+
+export const rareAmenitys = ['Free parking on premise', 'Air conditioning', 'Laptop friendly workspace', 'Elevator']
