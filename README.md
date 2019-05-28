@@ -7,5 +7,7 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 - Run the server (nodemon required: `npm install -g nodemon`) with `npm run server`
 - Populate the module with randomly generated data with `npm run seed`
 - Bundle the React app and run webpack with `npm run app`
-- To view the test built for the module use `npm test`
+
+## Running the Test
+- To run the test built for the module simply use `npm test`
 
