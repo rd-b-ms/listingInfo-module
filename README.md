@@ -13,8 +13,12 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 
 ## Built With
   **Front-End**: React
+  
   **Server**: Node, Express
+  
   **Database**: MongoDB
+  
   **Testing**: Jest, Enzyme, Supertest
+  
   **Styling**: Styled Components
 
