@@ -19,3 +19,4 @@ To run the test built for the module simply use `npm test`
   **Styling**: Styled Components  
 
 ## Visual Demo
+![alt text](http://www.giphy.com/gifs/RMBspQ8zyjohWk98Fm)
