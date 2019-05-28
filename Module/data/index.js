@@ -24,6 +24,10 @@ const connect = (type, cb, data) => {
       homeData.insert(data, (insertErr) => {
         // insert mock data
         if (insertErr) throw insertErr;
+        client.close(() => {
+          console.log('Seed data successfully added');
+          process.exit(0);
+        });
       });
     }
   });
