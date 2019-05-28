@@ -19,4 +19,5 @@ To run the test built for the module simply use `npm test`
   **Styling**: Styled Components  
 
 ## Visual Demo
- <img src="https://media.giphy.com/media/gf5h875WqEELIED4SO/giphy.gif" width="900px">
+ <img src="https://media.giphy.com/media/gf5h875WqEELIED4SO/giphy.gif" width="900px">  
+ Airbnb on the left and this clone on the right.
