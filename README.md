@@ -12,9 +12,9 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 - To run the test built for the module simply use `npm test`
 
 ## Built With
-- #### Front-End: React
-- #### Server: Node, Express
-- #### Database: MongoDB
-- #### Testing: Jest, Enzyme, Supertest
-- #### Styling: Styled Components
+  **Front-End**: React
+  **Server**: Node, Express
+  **Database**: MongoDB
+  **Testing**: Jest, Enzyme, Supertest
+  **Styling**: Styled Components
 
