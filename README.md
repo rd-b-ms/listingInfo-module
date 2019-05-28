@@ -20,3 +20,4 @@ To run the test built for the module simply use `npm test`
 
 ## Visual Demo
 ![Visual Demo](https://media.giphy.com/media/RMBspQ8zyjohWk98Fm/giphy.gif =250x250)
+ <img src="https://media.giphy.com/media/RMBspQ8zyjohWk98Fm/giphy.gif" width="250" height="250">
