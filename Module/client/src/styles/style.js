@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 58.333333333333336%;
+  min-width: 519px;
   min-height: 1px;
   float: left;
   padding-left: 8px;
@@ -59,7 +60,8 @@ export const NeighborhoodLink = styled.div`
 `;
 
 export const HostBox = styled.div`
-  width: 16.666666666666664%;
+  width: 100px;
+  height: 100px;
   float: left;
   padding-top: 6px;
   paddding-bottom: 6px;
@@ -107,8 +109,8 @@ export const Medal = styled.svg`
 
 export const MedalBox = styled.div`
   position: absolute;
-  right: 20%;
-  bottom: 30%;
+  right: 10px;
+  top: 35px;
   line-height: 0;
 `;
 
