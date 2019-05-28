@@ -5,3 +5,4 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 ## Getting Started
 - Install dependencies with `npm install`
 - Run the server (nodemon required: `npm install -g nodemon`) with `npm run server`
+- Populate the module with randomly generated data with `npm run seed`
