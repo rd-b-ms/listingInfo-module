@@ -9,7 +9,7 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 - Bundle the React app and run webpack with `npm run app`
 
 ## Running the Tests
-- To run the test built for the module simply use `npm test`
+To run the test built for the module simply use `npm test`
 
 ## Built With
   **Front-End**: React  
