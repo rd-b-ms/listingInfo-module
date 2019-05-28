@@ -18,3 +18,4 @@ To run the test built for the module simply use `npm test`
   **Testing**: Jest, Enzyme, Supertest  
   **Styling**: Styled Components  
 
+## Visual Demo
