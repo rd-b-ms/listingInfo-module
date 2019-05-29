@@ -7,7 +7,7 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 - MongoDB: `brew install mongodb`
 
 ## Getting Started
-- Install dependencies with npm install`
+- Install dependencies with `npm install`
 - Run the server with `npm run server`
 - Populate the module with randomly generated data with `npm run seed`
 - Bundle the React app and run webpack with `npm run app`
