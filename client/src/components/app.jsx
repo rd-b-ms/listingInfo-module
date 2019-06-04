@@ -25,6 +25,7 @@ class App extends React.Component {
     axios.get('/listinginfo').then((response) => {
       let { id } = this.state;
       // sets id to the first mock data example if id is undefined or outside range
+      console.log(response);
       if (!id || (id > 101) || (id < 0)) { id = 0; }
       this.setState({ data: response.data[id], loading: false });
     });
