@@ -30,6 +30,17 @@ const connect = (type, cb, data) => {
         });
       });
     }
+    if (type === 'put') {
+      console.log('update query used');
+      console.log(data);
+      homeData.updateOne(data, { $set: { hostName: 'tom' } }, (updateErr, result) => {
+        if (updateErr) {
+          console.log('Hustin we have a problem');
+          throw updateErr;
+        }
+        console.log('Data updated');
+      });
+    }
   });
 };
 

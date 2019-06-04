@@ -59,6 +59,7 @@ class App extends React.Component {
       secondTrait,
       tertTrait,
     };
+    console.log(this.state.data);
     return (
       <Container>
         <Header {...headerProps} />

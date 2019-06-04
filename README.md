@@ -11,7 +11,7 @@ The goal of this project was to use React to create a clone of the Airbnb infrom
 - Run the server with `npm run server`
 - Populate the module with randomly generated data with `npm run seed`
 - Bundle the React app and run webpack with `npm run app`
-- Change listing id by adding `?id=(listing # from 0-100)` to the end of the URL for expample `http://localhost:3004/?id=29`
+- Change listing id by adding `?id=(listing # from 0-100)` to the end of the URL for example `http://localhost:3004/?id=29`
 
 ## Running the Tests
 To run the test built for the module simply use `npm test`
