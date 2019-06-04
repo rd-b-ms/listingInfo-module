@@ -24,6 +24,12 @@ app.put('/listinginfo', (req, res) => {
     res.status(200).end();
   }, req.body);
 });
+app.delete('/listinginfo', (req, res) => {
+  db('delete', (err, result) => {
+    if (err) throw err;
+    res.status(200).end();
+  }, req.body);
+});
 
 
 module.exports = app;

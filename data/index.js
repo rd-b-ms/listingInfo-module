@@ -31,14 +31,15 @@ const connect = (type, cb, data) => {
       });
     }
     if (type === 'put') {
-      console.log('update query used');
-      console.log(data);
-      homeData.updateOne(data, { $set: { hostName: 'tom' } }, (updateErr, result) => {
-        if (updateErr) {
-          console.log('Hustin we have a problem');
-          throw updateErr;
-        }
+      homeData.updateOne(data, { $set: { hostName: 'sarah' } }, (updateErr) => {
+        if (updateErr) throw updateErr;
         console.log('Data updated');
+      });
+    }
+    if (type === 'delete') {
+      homeData.deleteOne(data, (deleteErr) => {
+        if (deleteErr) throw deleteErr;
+        console.log('Data deleted');
       });
     }
   });
