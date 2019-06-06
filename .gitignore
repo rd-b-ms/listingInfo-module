@@ -6,7 +6,7 @@
 npm
 npm-debug.log
 node_modules/
-
+data3.csv
 pids
 *.pid
 logs

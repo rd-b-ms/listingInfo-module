@@ -22,7 +22,14 @@ class App extends React.Component {
 
   // initial and only request to server for mockData
   getData() {
-    axios.get('/listinginfo').then((response) => {
+    const params = new URLSearchParams(window.location.search);
+    let url;
+    if (!params.has('id')) {
+      url = '/listinginfo/1';
+    } else {
+      url = `/listinginfo/${params.get('id')}`;
+    }
+    axios.get(url).then((response) => {
       let { id } = this.state;
       // sets id to the first mock data example if id is undefined or outside range
       console.log(response);
