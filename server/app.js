@@ -13,19 +13,21 @@ app.set('PORT', 3004);
 app.use(express.static('./public'));
 // sending seed data to client
 app.get('/listinginfo', (request, response) => {
+  const listingId = request.params.id;
+  console.log(listingId);
   db('get', (err, result) => {
     if (err) throw err;
     response.send(result).status(200).end();
   });
 });
 app.put('/listinginfo', (req, res) => {
-  db('put', (err, result) => {
+  db('put', (err) => {
     if (err) throw err;
     res.status(200).end();
   }, req.body);
 });
 app.delete('/listinginfo', (req, res) => {
-  db('delete', (err, result) => {
+  db('delete', (err) => {
     if (err) throw err;
     res.status(200).end();
   }, req.body);

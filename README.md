@@ -29,8 +29,9 @@ Airbnb on the left and this clone on the right.
  <img src="https://media.giphy.com/media/gf5h875WqEELIED4SO/giphy.gif" width="800px">  
  
 ## API docs
-`GET /listinginfo` retreives a list of all listings.
+`GET /listinginfo/:id` retreives a single listing with a specified id.
 A single listing has the shape:
+
 {
   amenities: (27) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
   bathrooms: 3
@@ -48,14 +49,17 @@ A single listing has the shape:
   tertTrait: "Great check-in experience"
   _id: "5cf5e63c7672c59093deec3d"
 }
+--------------------------------------------------------------------------------------------------------------------------------------------
 `PUT/listinginfo` updates a single listing.
 Update will first take in the identifier:
 {id: 29}
 Next it takes in the change:
 {hostName: tom}
+--------------------------------------------------------------------------------------------------------------------------------------------
 `DELETE/listinginfo` delete will delete a single listin.
 Delete takes in a single paramiter which is the identifier:
 {id: 29}
+--------------------------------------------------------------------------------------------------------------------------------------------
 `POST/listinginfo` inserts all of the generated data.
 Insert takes in a single paramiter which is the data to be inserted into the database:
 [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
