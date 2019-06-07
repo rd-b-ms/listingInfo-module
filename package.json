@@ -9,7 +9,9 @@
     "seed": "node data/addData.js",
     "test": "jest",
     "psqlSeed": "psql listinginfo < psql.sql",
-    "psqlShell": "psql listinginfo"
+    "psqlShell": "psql listinginfo",
+    "Cas": "/Users/spencerpierce/Desktop/apache-cassandra-3.11.4/bin/cqlsh",
+    "Cas2": "cqlsh listinginfo < cassandra.cql"
   },
   "jest": {
     "collectCoverage": true,

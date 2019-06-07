@@ -1,3 +1,10 @@
+
+DROP KEYSPACE IF EXISTS listinginfo;
+
+CREATE KEYSPACE listinginfo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'};
+
+USE listinginfo;
+
 DROP TABLE IF EXISTS listinginfo1;
 
 CREATE TABLE listinginfo1(
@@ -5,15 +12,15 @@ bathrooms int,
 bedrooms int,
 beds int,
 capacity int,
-Headers varchar(200),
-hometype varchar(200),
-hostName varchar(200),
-id int,
-longDescription varchar(200),
-neighborhood varchar(200),
-PrimTrait varchar(200),
-secondTrait varchar(200),
-tertTrait varchar(200),
+Headers text,
+hometype text,
+hostName text,
+id int PRIMARY KEY,
+longDescription text,
+neighborhood text,
+PrimTrait text,
+secondTrait text,
+tertTrait text,
 Wifi boolean,
 Laptop_friendly_workspace boolean,
 Air_conditioning boolean,
@@ -41,4 +48,3 @@ Private_entrance boolean,
 Elevator boolean,
 Hot_tub boolean);
 
-\COPY listinginfo1(Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) FROM '/Users/spencerpierce/listinginfo-module/data3.csv' DELIMITER ',' CSV HEADER;
