@@ -21,7 +21,9 @@ class LongDescription extends React.Component {
 
   render() {
     const { hidden } = this.state;
-    const { toggleView, longDescription } = this;
+    const { longDescription } = this.props;
+    const { toggleView } = this;
+    // console.log('longDescription', longDescription);
     const descProp = {
       toggleView,
       longDescription,

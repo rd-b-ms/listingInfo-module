@@ -10,8 +10,9 @@
     "test": "jest",
     "psqlSeed": "psql listinginfo < psql.sql",
     "psqlShell": "psql listinginfo",
-    "Cas": "/Users/spencerpierce/Desktop/apache-cassandra-3.11.4/bin/cqlsh",
-    "Cas2": "cqlsh listinginfo < cassandra.cql"
+    "testsql": "psql listinginfo < psql.sql",
+    "makeData": "node dataMaker.js",
+    "Cas": "/Users/spencerpierce/Desktop/apache-cassandra-3.11.4/bin/cqlsh"
   },
   "jest": {
     "collectCoverage": true,
@@ -40,6 +41,8 @@
     "lodash": "^4.17.11",
     "mongodb": "^3.2.4",
     "mongoose": "^5.5.8",
+    "newrelic": "^5.9.1",
+    "pg": "^7.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

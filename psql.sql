@@ -8,7 +8,7 @@ capacity int,
 Headers varchar(200),
 hometype varchar(200),
 hostName varchar(200),
-id int,
+id int PRIMARY KEY,
 longDescription varchar(200),
 neighborhood varchar(200),
 PrimTrait varchar(200),
@@ -41,4 +41,4 @@ Private_entrance boolean,
 Elevator boolean,
 Hot_tub boolean);
 
-\COPY listinginfo1(Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) FROM '/Users/spencerpierce/listinginfo-module/data3.csv' DELIMITER ',' CSV HEADER;
+\COPY listinginfo1(Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) FROM '/Users/spencerpierce/listinginfo-module1/listingData.csv' DELIMITER ',' CSV HEADER;

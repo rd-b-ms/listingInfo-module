@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 
 const bodyParser = require('body-parser');
@@ -12,26 +13,34 @@ app.set('PORT', 3004);
 // serving static files and setting middleware
 app.use(express.static('./public'));
 // sending seed data to client
-app.get('/listinginfo', (request, response) => {
-  const listingId = request.params.id;
-  console.log(listingId);
+app.get('/listinginfo/:id', (req, res) => {
+  const listingId = req.params.id;
   db('get', (err, result) => {
-    if (err) throw err;
-    response.send(result).status(200).end();
-  });
+    if (err) {
+      res.status(500);
+    } else {
+      res.send(result).status(200).end();
+    }
+  }, listingId);
 });
-app.put('/listinginfo', (req, res) => {
+app.put('/listinginfo/:id', (req, res) => {
   db('put', (err) => {
-    if (err) throw err;
-    res.status(200).end();
+    if (err) {
+      res.status(500);
+    } else {
+      res.status(200).end();
+    }
   }, req.body);
 });
-app.delete('/listinginfo', (req, res) => {
+app.delete('/listinginfo/:id', (req, res) => {
   db('delete', (err) => {
-    if (err) throw err;
+    if (err) res.status(500);
     res.status(200).end();
   }, req.body);
 });
+// app.get('/listings', (req, res) => {
+//   res.send(__dirname, './public/index.html');
+// });
 
 
 module.exports = app;
