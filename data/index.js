@@ -22,6 +22,10 @@ const connect = (type, cb, data) => {
       }
     });
   }
+  if (type === 'post') {
+    console.log('post here');
+    // pgPool.query('', [])
+  }
 };
 
 

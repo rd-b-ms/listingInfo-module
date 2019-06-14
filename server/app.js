@@ -2,10 +2,11 @@ require('newrelic');
 const express = require('express');
 
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const db = require('../data/index');
 
 const app = express();
-
+app.use(cors());
 app.use(bodyParser.json());
 
 // setting up port
@@ -37,6 +38,16 @@ app.delete('/listinginfo/:id', (req, res) => {
     if (err) res.status(500);
     res.status(200).end();
   }, req.body);
+});
+app.post('/listinginfo', (req, res) => {
+  console.log(req);
+  db('post', (err, result) => {
+    if (err) {
+      res.status(500);
+    } else {
+      res.status(200);
+    }
+  });
 });
 // app.get('/listings', (req, res) => {
 //   res.send(__dirname, './public/index.html');
