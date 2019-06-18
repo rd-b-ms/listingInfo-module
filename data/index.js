@@ -1,7 +1,9 @@
 const { Pool } = require('pg');
 
 const pgPool = new Pool({
-  host: 'localhost',
+  host: 'ec2-3-84-194-137.compute-1.amazonaws.com',
+  user: 'postgres',
+  password: 821,
   port: 5432,
   database: 'listinginfo',
 });
@@ -12,6 +14,7 @@ pgPool.connect()
 
 // Connect to database
 const connect = (type, cb, data) => {
+  console.log('getting here', data);
   if (type === 'get') {
     pgPool.query('SELECT * FROM listinginfo1 WHERE id= $1', [data], (err, res) => {
       if (err) {

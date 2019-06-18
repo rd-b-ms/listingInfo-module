@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { icons } from '../../styles/svg';
-import { AmenitiesContianer, AmenitiesTuple, Amenity, AmenityIcon, AmenityText } from '../../styles/style';
+import {
+  AmenitiesContianer, AmenitiesTuple, Amenity, AmenityIcon, AmenityText,
+} from '../../styles/style';
 import paths from '../../helpers/svgCreator';
 
 
@@ -19,8 +21,14 @@ const FeatAmenities = (props) => {
   );
   return (
     <AmenitiesContianer>
-      <AmenitiesTuple>{AmenityBox(0)}{AmenityBox(1)}</AmenitiesTuple>
-      <AmenitiesTuple>{AmenityBox(2)}{AmenityBox(3)}</AmenitiesTuple>
+      <AmenitiesTuple>
+        {AmenityBox(0)}
+        {AmenityBox(1)}
+      </AmenitiesTuple>
+      <AmenitiesTuple>
+        {AmenityBox(2)}
+        {AmenityBox(3)}
+      </AmenitiesTuple>
     </AmenitiesContianer>
   );
 };
