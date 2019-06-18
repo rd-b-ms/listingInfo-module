@@ -14,7 +14,7 @@ pgPool.connect()
 
 // Connect to database
 const connect = (type, cb, data) => {
-  console.log('getting here', data);
+  console.log('data is', data);
   if (type === 'get') {
     pgPool.query('SELECT * FROM listinginfo1 WHERE id= $1', [data], (err, res) => {
       if (err) {

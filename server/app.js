@@ -16,6 +16,7 @@ app.use(express.static('./public'));
 // sending seed data to client
 app.get('/listinginfo/:id', (req, res) => {
   const listingId = req.params.id;
+  console.log('listingid', listingId);
   db('get', (err, result) => {
     if (err) {
       res.status(500);
