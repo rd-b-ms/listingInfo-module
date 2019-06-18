@@ -5,9 +5,10 @@ import { ButtonText, ArrowIcon, ShowButton, Paragraph } from '../../styles/style
 const Short = (props) => {
   const { longDescription, toggleView } = props;
   // this short version will be shown when the user clicks read more
+  // console.log('short', longDescription);
   return (
     <div>
-      <Paragraph>{longDescription[0]}</Paragraph>
+      <Paragraph>{longDescription}</Paragraph>
       <ShowButton onClick={toggleView}>
         <ButtonText>Read more about the space</ButtonText>
         <ArrowIcon>

@@ -1,0 +1,24 @@
+-- EXPLAIN ANALYZE INSERT INTO listinginfo1 (Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) VALUES (3,8,4,4,'est','r','Alan',1,'ctio.','The Rocks','Super host,'Breakfast','Super host',true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true, true);
+-- EXPLAIN ANALYZE INSERT INTO listinginfo1 (Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) VALUES (3,8,4,4,'est','r','Alan',1000000002,'ctio.','The Rocks','Super host,Breakfast','Super host',true,true,true,true,true,false,false,false,false,true,false,true,false,true,true,false,false,true,false,true,true,false,false,true,true,true, true);
+-- EXPLAIN ANALYZE INSERT INTO listinginfo1 (Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) VALUES (3,8,4,4,'est','r','Alan',1000000003,'ctio.','The Rocks','Super host,Breakfast','Super host',false,true,true,true,true,false,false,false,false,true,false,true,false,true,true,false,false,true,false,true,true,false,false,true,true,true, true);
+-- EXPLAIN ANALYZE INSERT INTO listinginfo1 (Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) VALUES (3,8,4,4,'est','r','Alan',1000000004,'ctio.','The Rocks','Super host,Breakfast','Super host',false,true,true,true,true,false,false,false,false,true,false,true,false,true,true,false,false,true,false,true,true,false,false,true,true,true, true);
+-- EXPLAIN ANALYZE INSERT INTO listinginfo1 (Bathrooms, Bedrooms, Beds, capacity,  Headers, hometype, hostName, id, longDescription, neighborhood, PrimTrait, secondTrait, tertTrait, Wifi, Laptop_friendly_workspace, Air_conditioning, Kitchen, Washer, Free_parking_on_premise, Iron, Essentials, Tv, Hot_water, Pool, Cooking_basics, Dishes_and_silverware, Refrigerator, Oven, Stove, Hangers, Shampoo, Extra_pillow_and_blanket, Carbon_monoxide_detector, Smoke_Detector, First_aid_kit, Bed_linens, Private_entrance, Elevator, Hot_tub) VALUES (3,8,4,4,'est','r','Alan',1000000005,'ctio.','The Rocks','Super host,Breakfast','Super host',false,true,true,true,true,false,false,false,false,true,false,true,false,true,true,false,false,true,false,true,true,false,false,true,true,true, true);
+
+
+-- EXPLAIN ANALYZE SELECT * FROM listinginfo1 WHERE id = 9199430;
+-- EXPLAIN ANALYZE SELECT * FROM listinginfo1 WHERE id = 9299430;
+-- EXPLAIN ANALYZE SELECT * FROM listinginfo1 WHERE id = 9399430;
+-- EXPLAIN ANALYZE SELECT * FROM listinginfo1 WHERE id = 9499430;
+-- EXPLAIN ANALYZE SELECT * FROM listinginfo1 WHERE id = 9599430;
+
+-- EXPLAIN ANALYZE UPDATE listinginfo1 SET Bathrooms = 1 WHERE id = 9199430;
+-- EXPLAIN ANALYZE UPDATE listinginfo1 SET Bathrooms = 1 WHERE id = 9299430;
+-- EXPLAIN ANALYZE UPDATE listinginfo1 SET Bathrooms = 1 WHERE id = 9399430;
+-- EXPLAIN ANALYZE UPDATE listinginfo1 SET Bathrooms = 1 WHERE id = 9499430;
+-- EXPLAIN ANALYZE UPDATE listinginfo1 SET Bathrooms = 1 WHERE id = 9599430;
+
+-- EXPLAIN ANALYZE DELETE FROM listinginfo1 WHERE id = 1;
+-- EXPLAIN ANALYZE DELETE FROM listinginfo1 WHERE id = 9299430;
+-- EXPLAIN ANALYZE DELETE FROM listinginfo1 WHERE id = 9399430;
+-- EXPLAIN ANALYZE DELETE FROM listinginfo1 WHERE id = 9499430;
+-- EXPLAIN ANALYZE DELETE FROM listinginfo1 WHERE id = 9599430;

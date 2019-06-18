@@ -10,9 +10,10 @@ const Long = (props) => {
     return (<Paragraph>{paragraph}</Paragraph>);
   });
   // this long version will be shown when the user clicks read more
+  // console.log(longDescription);
   return (
     <div>
-      {paragraphMap(longDescription)}
+      {/* {paragraphMap(longDescription)} */}
       <ShowButton onClick={toggleView}>
         <ButtonText>Hide</ButtonText>
         <ArrowIcon>

@@ -4,8 +4,8 @@ const fs = require('fs');
 
 const faker = require('faker');
 
-const writer = fs.createWriteStream('data3.csv');
-let count = 0;
+const writer = fs.createWriteStream('listingData.csv');
+let count = 1;
 const neighborhoods = ['Alexandria',
   'Annandale',
   'Avalon',
@@ -77,6 +77,11 @@ function dataMaker(writer) {
         featTraits[Math.floor(Math.random() * featTraits.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
+        true,
+        true,
+        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
+        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
+        true,
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
@@ -94,12 +99,7 @@ function dataMaker(writer) {
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
-        randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
+        true,
         randomBoolean[Math.floor(Math.random() * randomBoolean.length)],
       ];
       const totalData = `${data.join()}\n`;
